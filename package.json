@@ -1,0 +1,25 @@
+{
+  "name": "backupteam-board-fe",
+  "version": "1.0.0",
+  "description": "스파르타 내일배움캠프 게시판 만들기 수업 준비",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyowony/backupteam-board-fe.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hyowony/backupteam-board-fe/issues"
+  },
+  "homepage": "https://github.com/hyowony/backupteam-board-fe#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0"
+  }
+}
