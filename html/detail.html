@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table id="contentsTable"></table>
+  </body>
+</html>
+<script>
+  const id = window.location.pathname.split("/")[2];
+  fetch(`http://localhost:5000/articles/${id}`)
+    .then((response) => response.json())
+    .then((userone) => {
+      const row = `
+    <th style="border: 1px solid black;">${userone.title}</th>`;
+
+      const tr = document.createElement("tr");
+      tr.innerHTML = row;
+      document.getElementById("contentsTable").appendChild(tr);
+    });
+
+  fetch(`http://localhost:5000/articles/${id}`)
+    .then((response) => response.json())
+    .then((userone) => {
+      const row = `<td style="border: 1px solid black;">${userone.contents}</td>`;
+
+      const tr = document.createElement("tr");
+      tr.innerHTML = row;
+      document.getElementById("contentsTable").appendChild(tr);
+    });
+</script>
